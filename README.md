@@ -2,12 +2,33 @@
 This is a single header library for `clay.h`, it contains some renderer abstractions and different
 components as well as enhancements and bugfixes to clay itself.
 
+## Features:
+
+- Colors - Color MACROS `Clay_Color`, usage is simple, you type the name, ex: `GREEN` and add the intensity `GREEN_500`, they go from 50 to 950.
+- Components - Such as `Column` for columns, `Row` for rows, `Separator` to add space between elements, `Box` for general purpose, and more...
+- Text - MACROS for adding text both `TextS()` and `Text()`, you can also format text with `F()`, which works the same as sprintf but with arenas.
+- And more - Like renderer abstractions, automatic font loading, ...
+
 ## Usage:
+A good way to keep this updated is by using git submodules, you can add `renderer.h` like this:
+
+```bash
+git submodule add https://github.com/TomasBorquez/renderer.h.git ./vendor/renderer
+```
+
+This will add `renderer.h` to `./vendor`, then you can include it from there or add a `-I"./vendor/renderer"` flag when compiling and importing like:
+
 ```c 
 #define CLAY_IMPLEMENTATION
-#define RENDERER_IMPLEMENTATION
 #include "clay.h"
+#define RENDERER_IMPLEMENTATION
 #include "renderer.h"
+```
+
+And for keeping it updated you can:
+
+```C 
+git submodule update --init
 ```
 
 Clay is of course required and in `main.c` or whatever your entrypoint is, you include `renderer.h` and define the macro
