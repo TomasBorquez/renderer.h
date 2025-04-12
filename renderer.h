@@ -1,7 +1,7 @@
 /* MIT License
 
   renderer.h - A single-header library for using Clay with Raylib
-  Version - 2025-05-11 (0.1.1):
+  Version - 2025-04-12 (0.1.1):
   https://github.com/TomasBorquez/renderer.h
 
   Usage:
