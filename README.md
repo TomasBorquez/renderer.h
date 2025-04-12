@@ -15,19 +15,13 @@ Clay is of course required and in `main.c` or whatever your entrypoint is, you i
 
 ```c 
 int main() {
-  init();
-
-  {
-    RenderOptions options = {
-        .width = 1400,
-        .height = 900,
-        .windowName = "Assembly Debugger",
-        .fontPath = "./resources/ComicMono.ttf",
-    };
-    RenderSetup(options, update, draw);
-  }
-
-  clean();
+  RenderOptions options = {
+      .width = 1400,
+      .height = 900,
+      .windowName = "Assembly Debugger",
+      .fontPath = "./resources/ComicMono.ttf",
+  };
+  RenderSetup(options, update, draw);
 }
 ```
 
@@ -62,7 +56,7 @@ void update() {
 }
 ```
 
-And define `draw`, `update` and create your layout.
+And define `draw`, `update` and create your layout. For a full example you can check my [assembly debugger](https://github.com/TomasBorquez/assembly-debugger).
 
 # TODOS:
 - [x] Add align, tl, tc, tr, etc.
