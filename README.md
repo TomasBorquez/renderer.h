@@ -18,7 +18,7 @@ int main() {
   RenderOptions options = {
       .width = 1400,
       .height = 900,
-      .windowName = "Assembly Debugger",
+      .windowName = "Example",
       .fontPath = "./resources/ComicMono.ttf",
   };
   RenderSetup(options, update, draw);
